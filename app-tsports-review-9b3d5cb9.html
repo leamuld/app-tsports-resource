@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>t足球 · 产品说明页 | app-tsports.com</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf7f2;
+            color: #3b3a36;
+            font-family: 'Georgia', 'Noto Serif SC', 'Times New Roman', serif;
+            line-height: 1.7;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 253, 248, 0.8);
+            padding: 2.5rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            color: #2c2b27;
+            border-left: 5px solid #b79b7e;
+            padding-left: 1.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #7d7263;
+            margin-bottom: 2.5rem;
+            font-style: italic;
+            border-bottom: 1px dashed #d9cfc0;
+            padding-bottom: 0.8rem;
+        }
+
+        .intro {
+            margin-bottom: 2.2rem;
+            background: #f3efe8;
+            padding: 1.8rem 1.8rem 1.8rem 2.2rem;
+            border-radius: 18px;
+            position: relative;
+        }
+
+        .intro p {
+            margin-bottom: 1em;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .pull-quote {
+            background: #eae3d8;
+            padding: 1.5rem 2rem;
+            border-radius: 30px 10px 30px 10px;
+            margin: 2rem 0;
+            font-size: 1.05rem;
+            color: #4d4740;
+            box-shadow: inset 0 0 0 1px #dfd5c7;
+            position: relative;
+        }
+
+        .pull-quote::before {
+            content: "❝";
+            font-size: 2.2rem;
+            color: #b79b7e;
+            position: absolute;
+            left: 0.6rem;
+            top: -0.2rem;
+            opacity: 0.4;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin: 2rem 0 1.5rem;
+        }
+
+        .feature-item {
+            flex: 1 1 180px;
+            background: #f9f5ef;
+            padding: 1.2rem 1.2rem 1rem;
+            border-radius: 20px;
+            border: 1px solid #e5dbce;
+        }
+
+        .feature-item h3 {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #4f463d;
+            margin-bottom: 0.3rem;
+            border-bottom: 2px dotted #d3c5b4;
+            padding-bottom: 0.3rem;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #5d554b;
+        }
+
+        .usage-tip {
+            background: #f2ede5;
+            border-left: 6px solid #b79b7e;
+            padding: 1.5rem 2rem;
+            border-radius: 0 20px 20px 0;
+            margin: 2.2rem 0;
+        }
+
+        .usage-tip h2 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #3b3530;
+            margin-bottom: 0.7rem;
+        }
+
+        .usage-tip ul {
+            list-style: none;
+            padding-left: 0.2rem;
+        }
+
+        .usage-tip li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.8rem;
+            position: relative;
+        }
+
+        .usage-tip li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #8f7b64;
+        }
+
+        .faq-mini {
+            margin: 2rem 0 1.5rem;
+            background: #f7f3ec;
+            padding: 1.6rem 1.8rem;
+            border-radius: 20px;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #e1d7c9;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-mini details:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #4f463d;
+            padding: 0.3rem 0;
+        }
+
+        .faq-mini summary::-webkit-details-marker {
+            color: #b79b7e;
+        }
+
+        .faq-mini p {
+            color: #5c5348;
+            margin-top: 0.4rem;
+            padding-left: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .action-note {
+            background: #eae2d6;
+            padding: 1.5rem 2rem;
+            border-radius: 40px 12px 40px 12px;
+            text-align: center;
+            margin: 2rem 0 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .action-note a {
+            color: #4f3f2e;
+            text-decoration: none;
+            border-bottom: 2px solid #b79b7e;
+            font-weight: 500;
+            transition: border 0.2s, color 0.2s;
+        }
+
+        .action-note a:hover {
+            color: #2c241e;
+            border-bottom-color: #7d6650;
+        }
+
+        .footer-meta {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #9b9287;
+            margin-top: 2.5rem;
+            border-top: 1px solid #e0d7cb;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .container {
+                padding: 1.8rem 1rem;
+            }
+
+            h1 {
+                font-size: 1.7rem;
+                padding-left: 0.8rem;
+            }
+
+            .feature-item {
+                flex: 1 1 100%;
+            }
+
+            .pull-quote {
+                padding: 1.2rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .usage-tip,
+            .faq-mini {
+                padding: 1.2rem;
+            }
+
+            .action-note {
+                padding: 1.2rem 1rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>t足球 · 使用说明</h1>
+    <div class="subhead">从识别到理解，一个产品的基础认知</div>
+
+    <div class="intro">
+        <p>当你第一次看到 <strong>app-tsports.com</strong> 这个地址时，最直接的疑问或许是：它用来做什么？它的核心是什么？简洁的回答是：这是一个围绕足球赛事数据与信息聚合的工具型产品。它所服务的主题，用一个词概括就是 <strong>t足球</strong>。</p>
+        <p>无论你是想快速了解某场比赛的背景，还是希望在一个页面里集中看到赛程、队伍近况、积分变动，这个网站都试图将碎片化的足球信息整理为可读性更强的结构。它不是社交平台，不侧重讨论与直播，而更接近一本轻量的足球参考手册——随时翻阅，但没有冗余的喧哗。</p>
+    </div>
+
+    <div class="pull-quote">
+        足球的数据本身不会讲故事，但好的呈现方式能让每一组数字都成为理解比赛的线索。<br>
+        —— 产品设计笔记
+    </div>
+
+    <h2 style="font-weight:400; font-size:1.5rem; color:#3f3a34; margin: 1.8rem 0 1rem;">三个值得留意的特点</h2>
+    <div class="feature-grid">
+        <div class="feature-item">
+            <h3>赛程整理</h3>
+            <p>按联赛、日期、球队维度交叉展示，减少在不同页面之间反复跳转的麻烦。</p>
+        </div>
+        <div class="feature-item">
+            <h3>积分与走势</h3>
+            <p>从近期战绩到赛季累计，提供纵向对比的视角，而不只是单个数字。</p>
+        </div>
+        <div class="feature-item">
+            <h3>信息密度可控</h3>
+            <p>页面布局偏向卡片与列表，避免满屏动态元素干扰阅读节奏。</p>
+        </div>
+    </div>
+
+    <div class="usage-tip">
+        <h2>使用建议</h2>
+        <ul>
+            <li>在赛前快速浏览对手近五场数据，辅助理解盘面与状态。</li>
+            <li>用于赛后复盘时核对阵容与时间线，配合其他视频或文字报道更佳。</li>
+            <li>如果你管理一个足球兴趣小组或写分析内容，可以把它当作数据源之一。</li>
+            <li>移动端适配良好，通勤或间隙时打开不费力。</li>
+        </ul>
+    </div>
+
+    <div class="faq-mini">
+        <details>
+            <summary>这个网站提供直播或比分吗？</summary>
+            <p>不提供实时直播流。比分部分以赛后更新为主，适合回顾而非秒级追踪。</p>
+        </details>
+        <details>
+            <summary>数据覆盖哪些联赛？</summary>
+            <p>以主流欧洲联赛及杯赛为主，部分南美与亚洲赛事会陆续补充，具体以页面实际内容为准。</p>
+        </details>
+        <details>
+            <summary>是否需要注册或付费？</summary>
+            <p>目前所有内容均免费访问，无需注册。未来若增加高级筛选或历史存档功能，会提前说明。</p>
+        </details>
+    </div>
+
+    <div class="action-note">
+        如果你想直接体验这种信息组织方式，可以前往 <a href="https://app-tsports.com">t足球</a> 查看当前赛程与数据模块。
+    </div>
+
+    <p style="margin-top:1.8rem; color:#6d655b; font-size:0.95rem; line-height:1.6; background:#f6f1ea; padding:1rem 1.5rem; border-radius:14px;">
+        <strong>一点说明：</strong> 本页是对产品用途的客观描述，不包含任何效果承诺或诱导性表述。足球世界本身就足够丰富，工具的意义在于帮人更快找到感兴趣的部分，而不是替代观看与思考。
+    </p>
+
+    <div class="footer-meta">
+        产品索引页 · 信息基于公开描述整理 · 2025
+    </div>
+</div>
+</body>
+</html>
