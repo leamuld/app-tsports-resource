@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>宝威体育 · 一处安静的起点</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f9f7f4;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', sans-serif;
+            color: #2c281b;
+            line-height: 1.7;
+            padding: 2rem 1.5rem 4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page {
+            max-width: 700px;
+            width: 100%;
+        }
+
+        /* 窄正文宽度 + 清晰层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+            margin: 2rem 0 0.2rem;
+            color: #1d1b16;
+            line-height: 1.2;
+            border-left: 4px solid #b49a7b;
+            padding-left: 1rem;
+        }
+
+        .hero-sub {
+            font-size: 1rem;
+            color: #7a6f5e;
+            margin-top: 0.1rem;
+            margin-bottom: 2.8rem;
+            padding-left: 1.4rem;
+            font-weight: 350;
+        }
+
+        .story-start {
+            font-size: 1.1rem;
+            background: #ffffffd9;
+            padding: 1.8rem 2rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+            margin: 2rem 0 1.8rem;
+            backdrop-filter: blur(2px);
+            border: 1px solid #ece7df;
+        }
+
+        .story-start p {
+            margin-bottom: 1.25rem;
+        }
+
+        .story-start p:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .quiet-connector {
+            font-size: 0.95rem;
+            color: #4f483b;
+            background: #f2efe9;
+            padding: 1.2rem 2rem;
+            border-radius: 18px;
+            margin: 1.8rem 0;
+            line-height: 1.8;
+        }
+
+        .feature-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.4rem 0 2rem;
+        }
+
+        .feature-card {
+            flex: 1 1 180px;
+            background: #ffffff;
+            padding: 1.5rem 1.2rem 1.2rem;
+            border-radius: 20px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            border: 1px solid #ece7df;
+            transition: box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 6px 14px rgba(70, 56, 40, 0.05);
+        }
+
+        .feature-card h3 {
+            font-weight: 470;
+            font-size: 1.2rem;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.4rem;
+            color: #342f24;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: #5b5345;
+            line-height: 1.6;
+        }
+
+        .ending-wrap {
+            background: #ece7df;
+            padding: 1.8rem 2rem;
+            border-radius: 28px;
+            margin: 2.8rem 0 1.6rem;
+            color: #2b261c;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .ending-wrap a {
+            color: #3d3627;
+            text-decoration: underline wavy #b49a7b 1px;
+            text-underline-offset: 4px;
+            font-weight: 450;
+            transition: color 0.15s;
+        }
+
+        .ending-wrap a:hover {
+            color: #7a623f;
+            text-decoration-color: #7a623f;
+        }
+
+        .inline-link {
+            color: #3d3627;
+            text-decoration: underline wavy #b49a7b 1px;
+            text-underline-offset: 4px;
+            font-weight: 450;
+        }
+
+        .inline-link:hover {
+            color: #7a623f;
+            text-decoration-color: #7a623f;
+        }
+
+        .faq-taste {
+            margin: 2rem 0 0.8rem;
+            padding: 0.2rem 0 0.8rem;
+            border-top: 1px dashed #d4cdc0;
+        }
+
+        .faq-taste details {
+            margin: 0.8rem 0;
+            font-size: 0.9rem;
+        }
+
+        .faq-taste summary {
+            font-weight: 450;
+            cursor: pointer;
+            color: #3f392b;
+            padding: 0.2rem 0;
+            transition: color 0.1s;
+        }
+
+        .faq-taste summary:hover {
+            color: #6f5f47;
+        }
+
+        .faq-taste details p {
+            margin-top: 0.5rem;
+            padding-left: 0.6rem;
+            color: #5b5345;
+            border-left: 2px solid #d4cdc0;
+            padding-left: 1rem;
+        }
+
+        .micro-footer {
+            font-size: 0.75rem;
+            color: #a59a88;
+            margin-top: 3.2rem;
+            text-align: center;
+            letter-spacing: 0.3px;
+            border-top: 1px solid #e2dbd0;
+            padding-top: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 1.5rem 1rem 3rem;
+            }
+            h1 {
+                font-size: 1.9rem;
+                padding-left: 0.8rem;
+            }
+            .story-start {
+                padding: 1.4rem 1.2rem;
+            }
+            .feature-card {
+                flex: 1 1 100%;
+            }
+            .ending-wrap {
+                padding: 1.4rem 1.2rem;
+            }
+        }
+
+        /* 节奏感微调 */
+        .soft-rule {
+            width: 40px;
+            height: 3px;
+            background: #d4cdc0;
+            margin: 0.5rem 0 1.5rem;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>宝威体育</h1>
+    <div class="hero-sub">— 一个愿意被慢慢了解的地方</div>
+
+    <!-- 开场短句 + 承接段落 -->
+    <div class="story-start">
+        <p>有些网站，你第一眼就知道它是为你准备的。没有喧闹的弹窗，没有刻意的催促，像一间街角开了很久的咖啡馆，推门进去，光线刚好，桌椅安稳。</p>
+        <p>一年多以前，我偶然打开 <a href="https://webs-baoweisports.com" class="inline-link">宝威体育</a> 的首页，当时只是随手点开一个链接，没想到后来成了我经常停留的角落。它不像那种急于证明自己的平台，反而更像一个安静的向导——你需要的，它刚好有；你好奇的，它愿意陪你慢慢看。</p>
+    </div>
+
+    <!-- 特点列表 (卡片式) -->
+    <div class="feature-grid">
+        <div class="feature-card">
+            <h3>清晰的结构</h3>
+            <p>从导航到内容，没有多余的弯道。每个板块都在它该在的位置，找什么都很顺手。</p>
+        </div>
+        <div class="feature-card">
+            <h3>朴素的可靠感</h3>
+            <p>界面不追求惊艳，但处处透着用心。加载稳定，信息扎实，让人愿意信任。</p>
+        </div>
+        <div class="feature-card">
+            <h3>无言的包容</h3>
+            <p>无论你是资深爱好者还是初来乍到，它不会用术语把你推开，也不会用浮夸把你淹没。</p>
+        </div>
+    </div>
+
+    <!-- 温和承接 + 场景描述 -->
+    <div class="quiet-connector">
+        <p>我自己最常做的，是在周末午后打开它，不着急点开什么，只是先扫一眼更新。页面留白舒服，文字大小适中，读起来眼睛不累。偶尔遇到感兴趣的主题，点进去看，内容展开得自然，像有人坐在对面轻声聊几句。</p>
+        <p style="margin-top: 1rem;">后来跟两个朋友提起，才发现他们也在用。我们聊到的共识是：<strong>不费力，不打扰</strong>——这是如今难得的东西。</p>
+    </div>
+
+    <!-- 温和结尾 + 嵌入链接的自然句子 -->
+    <div class="ending-wrap">
+        <p>如果你也在找一个可以安静浏览、没有压迫感的地方，或许可以给自己一次尝试的机会。有时候，一个好的站点就像一本旧书，封面不扎眼，翻开才知道里面有多妥帖。</p>
+        <p style="margin-top: 1.2rem;">我到现在还会偶尔回到&nbsp;<a href="https://webs-baoweisports.com">宝威体育</a>&nbsp;看看，每次都有新的细节被发现。它不张扬，但值得放慢脚步。</p>
+    </div>
+
+    <!-- FAQ 摘要 (放两个常见疑问, 不喧宾夺主) -->
+    <div class="faq-taste">
+        <details>
+            <summary>宝威体育是一个什么样的网站？</summary>
+            <p>它更像一个内容聚合与信息服务平台，注重浏览体验和结构的清晰度。没有强制注册或夸张引导，适合安静地获取信息。</p>
+        </details>
+        <details>
+            <summary>访问时需要做什么准备吗？</summary>
+            <p>不需要。直接打开网页即可浏览，所有主要内容都在页面里自然呈现。移动端和桌面端的适配也做得不错。</p>
+        </details>
+    </div>
+
+    <div class="micro-footer">
+        写于一个寻常的下午 · 感谢阅读
+    </div>
+</div>
+</body>
+</html>
